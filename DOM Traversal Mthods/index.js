@@ -2,18 +2,18 @@
 
 /* 
 
-parentNode
-parentElement
-Children
-childNodes
-firstChild
-firstElementChild
-lastChild
-lastElementChild
-nextElementSibling
-nextSibling
-previousElementSibling
-previousSibling
+parentNode => 
+parentElement => 
+Children => returns inner HTML collections of selected selector
+childNodes => returns  all like spaces or comments
+firstChild => firstelement
+firstElementChild => 
+lastChild => last element
+lastElementChild => 
+nextElementSibling => 
+nextSibling => 
+previousElementSibling => 
+previousSibling => 
 
 */
 
@@ -24,9 +24,9 @@ previousSibling
 
 // let's start understanding....
 
-let anyNode = document.getElementById('abhi').parentElement;
+// let anyNode = document.getElementById('abhi').parentElement;
 
-anyNode = document.getElementById('inner').parentElement;
+// anyNode = document.getElementById('inner').parentElement;
 
 // anyNode = document.getElementById('inner').parentNode;
 
@@ -40,11 +40,11 @@ anyNode = document.getElementById('inner').parentElement;
 
 // use of children and childNodes...
 
-anyNode = document.getElementById('inner').children;
-anyNode = document.getElementById('ininner').children[2].style.background = 'cyan';
-anyNode = document.getElementById('inner').children[1];
+// anyNode = document.getElementById('inner').children;
+// anyNode = document.getElementById('ininner').children[2].style.background = 'cyan';
+// anyNode = document.getElementById('inner').children[1];
 // anyNode = document.getElementById('outer').childNodes;
-console.log(anyNode);
+// console.log(anyNode);
 // 'Cascadia Code', Consolas, 'Courier New', monospace
 //Consolas, 'Courier New', monospace
 
@@ -58,5 +58,17 @@ console.log(anyNode);
 // firstChild return first Node or element...
 // lastChild return last Node or element...
 
-anyNode = document.getElementById('ininner').firstChild;
+// anyNode = document.getElementById('ininner').firstChild;
 // console.log(anyNode);
+
+
+
+// code with harry...
+
+// childNode and children
+
+let cont = document.querySelector('.container');
+console.log(cont.children);// returns html collections
+console.log(cont.childNodes);// return free spaces and collection...
+
+console.log(cont.children[1].children);
