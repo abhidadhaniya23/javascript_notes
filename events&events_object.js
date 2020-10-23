@@ -21,3 +21,25 @@ document.getElementById('main').addEventListener('click', function (e) {
 
     console.log(variable);
 });
+
+// tutorials 18
+// more events in javascript.....
+
+let mybtn = document.getElementById('mybtn');
+mybtn.addEventListener('click', myFn);
+function myFn(e) {
+    console.log('You clicked for submit...', e);
+    // use this e.preventDefalue for not redirect on none.html
+    // because i used form tag, post method so it will be redirecting but use e.prevent default to don't redirect on that page...
+    e.preventDefault();
+}
+
+document.querySelector('html').addEventListener('mousemove', function (e) {
+    // console.log(e.offsetX, e.offsetY)
+    document.querySelector('html').style.background = `rgb(${parseInt(Math.random() * 255)},${parseInt(Math.random() * 255)},${parseInt(Math.random() * 255)})`;
+    document.querySelector('html').style.transition = 'background 0.5s ease';
+    document.querySelector('li').innerText = `${e.offsetX},${e.offsetY}`
+});
+
+// 543 => x
+// 1090 => y

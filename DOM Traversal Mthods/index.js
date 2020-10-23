@@ -71,4 +71,34 @@ let cont = document.querySelector('.container');
 console.log(cont.children);// returns html collections
 console.log(cont.childNodes);// return free spaces and collection...
 
-console.log(cont.children[1].children);
+console.log(cont.children[1].nodeName, cont.children[1].nodeType);
+
+/*
+node type list...
+
+1. element
+2. attribute
+3. text node
+8. comment
+9. document
+10. doc type
+*/
+// first child
+console.log(cont.firstChild);
+console.log(cont.firstElementChild);
+
+// last child
+console.log(cont.lastChild);
+console.log(cont.lastElementChild);
+
+console.log(cont.children);
+console.log(cont.childElementCount); // returns children.length
+console.log(cont.children.length == cont.childElementCount);
+
+// parent
+console.log(cont.parentNode); // thats simple and its body...
+console.log(document.querySelector('#inner').parentElement); // returns container class div...
+
+// nextSibling => (means)= > next thing lke (node or element)
+console.log(cont.firstElementChild.nextSibling); // returns node vlaue
+console.log(cont.firstElementChild.nextElementSibling); // returns next element

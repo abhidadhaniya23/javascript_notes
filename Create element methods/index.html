@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" id="abhi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Important Methods</title>
+</head>
+<style>
+    * {
+        font-size: 20px;
+        font-family: sans-serif;
+    }
+
+    .container {
+        padding: 20px;
+        background-color: thistle;
+    }
+
+    #inner {
+        background: seashell;
+        padding: 5px;
+    }
+
+    #ininner {
+        padding: 10px;
+        background: tomato;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main {
+        background: snow;
+        padding: 15px;
+        margin: 5px;
+    }
+
+    #inner p {
+        margin: 20px;
+    }
+</style>
+
+<body>
+
+    <div class="container" id="outer">
+        <p>Outer</p>
+        <div id="inner">
+            <p>Inner</p>
+            <div id="ininner">
+                <div class="main" id="in1">1</div>
+                <div class="main" id="in2">2</div>
+                <div class="main" id="in3">3</div>
+                <div class="main" id="in4">4</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
