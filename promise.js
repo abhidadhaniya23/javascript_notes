@@ -3,6 +3,7 @@
 /*
 promise is basically an object
 Promise : give me this data 	// This is a simple promise
+there 3 states for promise...
 resolve,
 reject,
 panding

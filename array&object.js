@@ -58,7 +58,7 @@ console.log(marks);
 let myObj = {
     name: 'Abhi',
     'last name': 'Dadhaniya',
-    isAvtive: true,
+    isActive: true,
     myMarks: [2, 10, 39]
 }
 console.log(myObj);
