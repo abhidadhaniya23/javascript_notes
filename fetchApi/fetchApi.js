@@ -24,34 +24,34 @@ console.log('done');
 
 
 
-async function getData(){
-    const response=await fetch('https://api.github.com/users');
-    const user= await response.json();
+async function getData() {
+    const response = await fetch('https://api.github.com/users');
+    const user = await response.json();
     return user;
 }
 
-let data=getData();
-data.then(data=>{
+let data = getData();
+data.then(data => {
     console.log(data);
-    Array.from(data).forEach(e=>{
+    Array.from(data).forEach(e => {
         // console.log(parseInt(Math.random()*255));
-        let anchorTag=document.createElement('a');
-        let divElm=document.createElement('div');
-        let imgElm=document.createElement('img');
-        let color=`rgb(${parseInt(Math.random()*255)},${parseInt(Math.random()*255)},${parseInt(Math.random()*255)})`;
-        anchorTag.href=`${e.html_url}`;
-        imgElm.src=e.avatar_url;
-        imgElm.style.border=`3px solid ${color}`;
+        let anchorTag = document.createElement('a');
+        let divElm = document.createElement('div');
+        let imgElm = document.createElement('img');
+        let color = `rgb(${parseInt(Math.random() * 255)},${parseInt(Math.random() * 255)},${parseInt(Math.random() * 255)})`;
+        anchorTag.href = `${e.html_url}`;
+        imgElm.src = e.avatar_url;
+        imgElm.style.border = `3px solid ${color}`;
         divElm.classList.add('divElm');
-        divElm.style.background=`${color}`;
-        imgElm.onload=()=>{
+        divElm.style.background = `${color}`;
+        imgElm.onload = () => {
             anchorTag.append(imgElm);
             divElm.append(anchorTag);
             document.body.append(divElm);
         }
     })
-}).catch(error=>{console.error('Data is not coming'+error)});
+}).catch(error => { console.error('Data is not coming' + error) });
 
-window.onscroll=function(event){
+window.onscroll = function (event) {
     console.log(event);
 }

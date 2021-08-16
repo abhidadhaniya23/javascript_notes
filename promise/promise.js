@@ -1,6 +1,6 @@
 // promise is basically an object...
 
-// it has to most important factor(parameter)
+// it has 2 most important factor(parameter)
 // and those are resolve and reject...
 
 // if any promise complate task which is given by us (or user) then it's resolve
