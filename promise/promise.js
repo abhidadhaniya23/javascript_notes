@@ -3,9 +3,9 @@
 // it has 2 most important factor(parameter)
 // and those are resolve and reject...
 
-// if any promise complate task which is given by us (or user) then it's resolve
+// if any promise complete task which is given by us (or user) then it's resolve
 // if its not resolve then its reject...
-// and third state is panding statement...
+// and third state is pending statement...
 /*
 const promise = new Promise((resolve, reject)=>{
     // assume this response bringing from an api or any database...
@@ -72,21 +72,21 @@ function videoDetails(videos) {
 
 // how Promise.all works ...?
 
-const yt=new Promise((resolve,reject)=>{
+const yt = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log('getting videos from yt...');
-        resolve({ videos:[1,2,3,4,5] });
+        resolve({ videos: [1, 2, 3, 4, 5] });
     }, 2000);
 })
-const fb=new Promise((resolve,reject)=>{
+const fb = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log('getting from fb...');
-        resolve({ user:'username' });
+        resolve({ user: 'username' });
     }, 2000);
 })
 
 // so, this is the use of promise.all
-Promise.all([yt,fb])
-.then(result=>console.log(result));
+Promise.all([yt, fb])
+    .then(result => console.log(result));
 
 console.log('end');
